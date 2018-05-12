@@ -1,0 +1,57 @@
+<div class="mainContainer">
+    <div class="citizen-age-menu">
+        <p class="citizen-text">Citizen Age</p>
+        <age-group1 
+            person-data="persons" 
+            filtered-data="personsCopy"
+            selected-tag="tags"> 
+        </age-group1>
+
+        <age-group2
+            person-data="persons"
+            filtered-data="personsCopy"
+            selected-tag="tags">
+        </age-group2>
+
+        <age-group3
+             person-data="persons"
+             filtered-data="personsCopy"
+             selected-tag="tags">
+        </age-group3>
+
+        <age-group4
+        person-data='persons'
+        filtered-data="personsCopy"
+        selected-tag="tags">
+        </age-group4>
+        
+    </div>
+    <div class="main-content">
+        <div class="tag-display">
+            <div class="tag-button">
+                <tags-input ng-model="tags" ng-repeat="tag in tags">{{tag.text}}</tags-input>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                    <th>AGE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="person in persons">
+                    <td>{{person.id}}</td>
+                    <td>{{person.name}}</td>
+                    <td>{{person.desc}}</td>
+                    <td>{{person.age}}</td>
+
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
